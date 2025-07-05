@@ -1,50 +1,33 @@
-# Welcome to your Expo app 👋
+git clone https://github.com/prathik-bot/sensormapapp.git
+cd sensormapapp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+npm install
 
-## Get started
+npm start
 
-1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+Usage
+The app fetches sensor data from your backend API (http://192.168.1.36:5001/api/mock-sensors) -> This is currently mocked
 
-2. Start the app
+Modify the API endpoint in Index.tsx or your main component if needed.
 
-   ```bash
-   npx expo start
-   ```
+Sensor markers show location and PM2.5 value on the map popup.
 
-In the output, you'll find options to open the app in a
+Project Structure
+/public/images/ - Marker icon images used by Leaflet
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+/components/MapComponent.web.tsx - Web version of the map using Leaflet and React-Leaflet
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+/app/Index.tsx - Main app entry fetching sensors and rendering the map
 
-## Get a fresh project
+/src/webStubs/ - React Native Maps web stubs 
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+Dependencies
+React 18+
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Leaflet 1.9.4
 
-## Learn more
+React-Leaflet 4.x
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+TypeScript

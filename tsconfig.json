@@ -3,15 +3,20 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["./*"]
+    },
+    "resolveJsonModule": true,
+    "moduleSuffixes": [".native", ".android", ".ios", ".web", ""],
+    "typeRoots": [
+      "./src/@types",
+      "./node_modules/@types"
+    ]
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "src/@types/**/*.d.ts"
   ]
 }
